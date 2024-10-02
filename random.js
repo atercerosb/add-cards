@@ -1,6 +1,5 @@
-const min=0
-const max=1000
-export function getRandomInt (){
-    return Math.floor(Math.random() * (max - min)) + min;
+export async function getRandom(url) {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
 }
-
